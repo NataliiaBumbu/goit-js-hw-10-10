@@ -2,10 +2,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 
-const fp = flatpickr('#datetime-picker', options);
-
-refs.btnTimerStart.addEventListener('click',startTimer);
-
 
 
 const refs = {
@@ -15,6 +11,13 @@ const refs = {
   minutesRef: document.querySelector('[data-minutes]'),
   secondsRef: document.querySelector('[data-seconds]'),
 };
+
+
+const fp = flatpickr('#datetime-picker', options);
+
+refs.btnTimerStart.addEventListener('click',startTimer);
+
+
 
 refs.btnTimerStart.disabled = true;
 let timerId = null;
